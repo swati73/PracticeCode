@@ -6,7 +6,7 @@ public class PermMissingElem {
 
 	public static int getMissingElement(int [] A) {
 		Arrays.sort(A);
-		int min = 1;
+		int min = A[0];
 		for (int i = 0; i < A.length; i++) {
 			if(A[i]==min)
 				min++;
@@ -15,7 +15,7 @@ public class PermMissingElem {
 	}
 	public static void main(String[] args) {
 		
-          int [] A= {1,2,3,5};
+          int [] A= {2,4,3,6};
           int a = getMissingElement(A);
           System.out.println("Missing Element "+a);
 	}
