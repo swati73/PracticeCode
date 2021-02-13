@@ -14,10 +14,13 @@ public class PermMissingElem {
 		return min;
 	}
 	public static void main(String[] args) {
-		
+		  
           int [] A= {2,4,3,6};
           int a = getMissingElement(A);
           System.out.println("Missing Element "+a);
+          
+          String m = "banana";
+          System.out.println(m.compareTo("apple"));
 	}
 
 }
