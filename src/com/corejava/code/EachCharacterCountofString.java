@@ -1,5 +1,8 @@
 package com.corejava.code;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class EachCharacterCountofString {
 
 	static final int MAX_CHAR = 256;
@@ -26,10 +29,26 @@ public class EachCharacterCountofString {
 		}
 
 	}
+	
+	static void getEachCharacterCount2(String str) {
+		char[] ch = str.toCharArray();
+		Map<Character,Integer> map = new HashMap<>();
+		for(Character ch1 : ch) {
+		int count = map.containsKey(ch1) ? map.get(ch1):0;
+		map.put(ch1,count+1);
+		}
+	    
+		for(Character ch1 : map.keySet()) {
+			System.out.println("Number count of character "+ch1+" is "+map.get(ch1));
+		}
+
+	}
+
 	public static void main(String[] args) {
 
-		String str = "HelloWorld";
+		String str = "Hello";
 		getEachCharacterCount(str);
+		getEachCharacterCount2(str);
 	}
 
 }
